@@ -1,0 +1,22 @@
+#dealer-cards img,
+#player-cards img{
+    height: 175px;
+    width: 125px;
+    padding: .5em;
+}
+
+#hit,
+#stay,
+#reset{
+    padding: 1em;
+    margin: .5em;
+}
+
+#header {
+    padding-top: 4em;
+}
+
+#results{
+    padding-top: .5em;
+    color: #1100ff;
+}

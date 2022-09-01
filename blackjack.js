@@ -126,21 +126,22 @@ function startGame(deck) {
     function checkWinner() {
         let resultMessage = "";
         if (playerSum > 21) {
-            resultMessage = "THE FRY LOSES";
+            resultMessage = "THE PLAYER LOSES";
         } else if (dealerSum > 21) {
-            resultMessage = "THE FRY WINS";
+            resultMessage = "THE PLAYER WINS";
         } else if (playerSum === dealerSum) {
             resultMessage = "NO ONE WINS"
         } else if (playerSum > dealerSum) {
-            resultMessage = "THE FRY WINS"
+            resultMessage = "THE PLAYER WINS"
         } else if (playerSum < dealerSum) {
-            resultMessage = "THE FRY LOSES"
+            resultMessage = "THE PLAYER LOSES"
         }
         document.getElementById("hidden").src = "./card-sprites/" + hidden + ".png";
         document.getElementById("dealer-sum").innerText = dealerSum;
         document.getElementById("results").innerText = resultMessage;
         document.getElementById('reset').removeAttribute("disabled");
-
+        document.getElementById('hit').setAttribute("disabled","");
+        document.getElementById('stay').setAttribute("disabled","");
 
 
 

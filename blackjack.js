@@ -96,7 +96,7 @@ function startGame(deck) {
         document.getElementById("player-cards").append(cardSprite);
         document.getElementById("player-sum").innerText = playerSum;
 
-        if (playerSum >= 21) {
+        if (playerSum > 21) {
             checkWinner();
         }
 
@@ -130,7 +130,7 @@ function startGame(deck) {
         } else if (dealerSum > 21) {
             resultMessage = "THE PLAYER WINS";
         } else if (playerSum === dealerSum) {
-            resultMessage = "NO ONE WINS"
+            resultMessage = "THAT'S A TIE"
         } else if (playerSum > dealerSum) {
             resultMessage = "THE PLAYER WINS"
         } else if (playerSum < dealerSum) {
